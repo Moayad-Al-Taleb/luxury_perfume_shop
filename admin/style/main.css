@@ -1,0 +1,301 @@
+/* تضمين الخطوط من مكتبة google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+/* تضمين الخطوط من مكتبة google fonts  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in;
+  font-family: "Poppins", sans-serif;
+}
+
+/* لتعريف متغيرات في الملف  */
+
+:root {
+  --black-color: #202020;
+  --white-color: #fff;
+  --green-color: rgb(150, 218, 62);
+  --yellow-color: #ece25c;
+  --red-color: rgb(228, 52, 52);
+  --blue-color: rgb(52, 128, 228);
+}
+/* لتعريف متغيرات في الملف  */
+
+body {
+  background-color: rgb(245, 245, 212);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+  text-transform: capitalize;
+  color: var(--black-color);
+}
+h1,
+h2,
+h3,
+th {
+  font-family: "Cairo" !important;
+}
+
+h4,
+h5,
+h6,
+p,
+span,
+label,
+input,
+button,
+td,
+a {
+  font-family: "Tajawal" !important;
+}
+
+span,
+p,
+label {
+  font-size: 18px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.title-text {
+  margin: 0.5rem 0;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.dashboard-container {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+}
+
+table,
+th,
+td {
+  border: 0.5px solid #777;
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+  background-color: #dbdbdb7a;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+table {
+  margin: 0 auto;
+  width: 90%;
+}
+
+th,
+td {
+  padding: 8px;
+}
+
+thead {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.name-with-img {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.content-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem;
+  gap: 2rem;
+}
+
+.primary-btn,
+.danger-btn,
+.success-btn,
+.warning-btn {
+  padding: 8px 14px;
+  font-size: 16px;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.primary-btn {
+  background-color: rgb(52, 128, 228);
+}
+.danger-btn {
+  background-color: rgb(228, 52, 52);
+}
+.warning-btn {
+  background-color: var(--yellow-color);
+  color: var(--black-color) !important;
+}
+.success-btn {
+  background-color: var(--green-color);
+  color: var(--black-color) !important;
+}
+
+.success-text {
+  color: var(--green-color);
+}
+.info-text {
+  color: var(--yellow-color);
+}
+.danger-text {
+  color: var(--red-color);
+}
+.primary-text {
+  color: var(--blue-color);
+}
+
+.msg {
+  border-radius: 8px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+  padding: 12px 24px;
+  margin: 16px 0;
+}
+.success-msg {
+  background-color: var(--green-color);
+  color: var(--black-color);
+}
+.error-msg {
+  background-color: var(--red-color);
+  color: var(--white-color);
+}
+.warning-msg {
+  background-color: var(--yellow-color);
+  color: var(--black-color);
+}
+.err_msg {
+  font-family: "Tajawal";
+  color: red;
+}
+
+.form-container {
+  width: fit-content;
+  margin: 16px 0;
+  min-width: 300px;
+}
+.search-form {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+}
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.input-text {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.full-width-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.flexed-input {
+  width: 48%;
+}
+
+.inputs-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+textarea {
+  height: 70px;
+  resize: vertical;
+}
+.shadow {
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+input[type="file"] {
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  border: 2px solid var(--white-color);
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: var(--white-color);
+  transition: 1s;
+}
+
+input[type="file"]:hover::file-selector-button {
+  background-color: var(--yellow-color);
+  border: 2px solid var(--yellow-color);
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.btns-controls-container {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  button,
+  a,
+  p,
+  span {
+    font-size: 14px !important;
+  }
+  table {
+    width: 100%;
+  }
+  .flexed-input {
+    width: 100%;
+  }
+}

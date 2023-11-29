@@ -1,0 +1,167 @@
+.nav-1-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-1-wrapper div {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav-1-link {
+  background-color: #c5963a;
+  color: white;
+  padding: 5px 10px;
+}
+
+.search-btn {
+  cursor: pointer;
+}
+
+.first-header {
+  background-image: url("../imgs/pngwing.com\ \(4\).png");
+  position: relative;
+}
+.nav-1-wrapper,
+.nav-with-logo {
+  z-index: 3;
+  position: relative;
+}
+.header-overflow {
+  position: absolute;
+  z-index: 1;
+  filter: blur(5px);
+  backdrop-filter: blur(0);
+  width: 100%;
+  height: 100%;
+}
+.nav-with-logo {
+  padding-top: 32px;
+  padding-bottom: 16px;
+}
+
+.nav-2-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nav-3-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.title {
+  color: #c5963a;
+}
+.sub_nav_container {
+  position: relative;
+}
+.sub_nav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 100;
+  top: 2.2rem;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  min-width: 90px;
+  opacity: 0;
+  visibility: hidden;
+  right: -15px;
+}
+.sub_nav_container:hover .sub_nav {
+  opacity: 1;
+  visibility: visible;
+  right: 0px;
+}
+.sub_nav_link {
+  padding: 10px;
+}
+.sub_nav_link:hover {
+  background-color: var(--black-color);
+  color: white;
+}
+.nav-links {
+  position: relative;
+}
+.nav-links::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: -20px;
+  width: 100%;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #c5963a;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.nav-links:hover::before {
+  opacity: 1;
+  visibility: visible;
+  right: 0;
+}
+.nav-links.active::before {
+  opacity: 1;
+  visibility: visible;
+  right: 0;
+}
+.nav-links.active {
+  color: #c5963a;
+  font-weight: 500;
+}
+.search-form {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  scale: 0;
+  opacity: 0;
+  z-index: 100;
+  visibility: visible;
+  align-items: center;
+}
+.search-form > form {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.search-input {
+  width: 320px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+.search-submit-btn {
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #c5963a;
+  color: white;
+  cursor: pointer;
+}
+.close-icon {
+  color: white;
+  font-size: 40px;
+  position: fixed;
+  inset: 0;
+  right: 49%;
+  top: 35%;
+  cursor: pointer;
+}
+.search-form.active {
+  opacity: 1;
+  visibility: visible;
+  scale: 1;
+}

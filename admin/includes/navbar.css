@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  background-color: #fff;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1rem;
+  border-radius: 8px;
+  justify-content: space-between;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.menu-icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+}
+.menu-icon > i {
+  cursor: pointer;
+}

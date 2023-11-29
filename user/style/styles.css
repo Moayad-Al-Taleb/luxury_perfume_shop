@@ -1,0 +1,223 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== GALLERY ===============*/
+.gallery {
+  height: 80vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.gallery__card {
+  position: relative;
+  width: 208px;
+  height: 268px;
+  border-radius: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.gallery__overflow {
+  position: relative;
+}
+
+.gallery__thumbnail {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s;
+}
+
+.gallery__thumbnail-img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+/* Swiper class */
+.gallery-cards,
+.gallery-thumbs {
+  width: 260px;
+}
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-cards:hover .gallery__img {
+  transform: scale(1.1);
+}
+
+.gallery .swiper-wrapper {
+  padding: 2.5rem 0;
+}
+
+.gallery-thumbs {
+  height: 132px;
+}
+
+/* Active thumbnail */
+.swiper-slide-active .gallery__thumbnail {
+  transform: translateY(-1.25rem) scale(1.2);
+}
+
+/* Rotate thumbnail */
+.swiper-slide-next .gallery__thumbnail {
+  transform: rotate(-15deg);
+}
+
+.swiper-slide-prev .gallery__thumbnail {
+  transform: rotate(15deg);
+}
+
+/* Sliding numbers */
+.swiper-pagination-fraction {
+  font-size: var(--small-font-size);
+  letter-spacing: -1px;
+  font-weight: 500;
+  color: var(--first-color);
+  bottom: 0;
+}
+
+/* Other swiper settings */
+.gallery-cards::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.swiper-horizontal.swiper-css-mode > .swiper-wrapper {
+  scroll-snap-type: initial;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 1024px) {
+  .gallery__card {
+    width: 220px;
+    height: 290px;
+  }
+  .gallery__thumbnail {
+    width: 65px;
+    height: 65px;
+  }
+  .gallery-cards,
+  .gallery-thumbs {
+    width: 280px;
+  }
+}
+
+.product_info-container {
+  display: flex;
+}
+
+/* //////////////////////// */
+.product-content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.product-content-list li {
+  font-size: 15px;
+  color: #555;
+}
+.product-content-list li span {
+  font-size: 20px;
+}
+.product-imgs-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.product-img-gallery {
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 25%;
+}
+.product-img-gallery img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25%;
+}
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.feedback-input-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.feedback-input-field > textarea {
+  width: 400px;
+  max-width: 320px;
+  resize: vertical;
+}
+.testmonials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.testmonial-content {
+  width: 450px;
+  height: 150px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  border-radius: 16px;
+}
+.testmonial-content > a {
+  background-color: rgb(228, 52, 52);
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .product_info-container {
+    flex-direction: column;
+  }
+}
